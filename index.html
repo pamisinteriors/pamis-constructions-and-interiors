@@ -1,50 +1,115 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pami's Construction and Interiors</title>
+    <title>Pami's Construction & Interiors</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+
+<header class="navbar">
+    <div class="container nav-container">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.jpg" alt="Pami's Construction & Interiors Logo">
+            </a>
+        </div>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
 </header>
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="carousel">
+        <img src="images/hero1.jpg" class="carousel-image active" alt="Luxury Villa Construction">
+        <img src="images/hero2.jpg" class="carousel-image" alt="Modern Interior Design">
+        <img src="images/hero3.jpg" class="carousel-image" alt="Premium Renovation">
+        <img src="images/hero4.jpg" class="carousel-image" alt="Premium Renovation">
+        <img src="images/hero5.jpg" class="carousel-image" alt="Premium Renovation">
+        <img src="images/hero6.jpg" class="carousel-image" alt="Premium Renovation">
+        <img src="images/hero7.jpg" class="carousel-image" alt="Premium Renovation">
+        <img src="images/hero8.jpg" class="carousel-image" alt="Premium Renovation">
+        <img src="images/hero9.jpg" class="carousel-image" alt="Premium Renovation">
+        <img src="images/hero10.jpg" class="carousel-image" alt="Premium Renovation">
+        <img src="images/hero11.jpg" class="carousel-image" alt="Premium Renovation">
+        <img src="images/hero12.jpg" class="carousel-image" alt="Premium Renovation">
+        <img src="images/hero13.jpg" class="carousel-image" alt="Premium Renovation">
+        <img src="images/hero14.jpg" class="carousel-image" alt="Premium Renovation">
 
-<div class="hero">
-    <h1>Building Dreams, Crafting Spaces</h1>
-    <p>End-to-end solutions for all types of constructions and interior designs in Bangalore.</p>
-</div>
+        <button class="carousel-btn prev">&#10094;</button>
+        <button class="carousel-btn next">&#10095;</button>
+    </div>
+    <div class="hero-text">
+        <h1>Building Dreams, Crafting Spaces</h1>
+        <p>Your trusted partner for high-quality construction and interior solutions in Bangalore.</p>
+    </div>
+</section>
 
-<section>
+<!-- SERVICES SECTION -->
+<section class="services-section container">
     <h2>Our Services</h2>
     <div class="services">
         <div class="service-card">
             <h3>Construction</h3>
-            <p>From concept to completion, we handle residential, commercial, and industrial projects with unmatched quality and precision.</p>
+            <p>From concept to completion, we execute residential, commercial, and industrial projects with precision and quality.</p>
         </div>
         <div class="service-card">
             <h3>Interior Design</h3>
-            <p>Transforming spaces with functional and aesthetic designs tailored to your taste and lifestyle.</p>
+            <p>Creating functional and aesthetically pleasing interiors tailored to your unique style.</p>
         </div>
         <div class="service-card">
             <h3>Renovation</h3>
-            <p>Upgrading old spaces with modern solutions, ensuring durability and a fresh look.</p>
+            <p>Transforming old spaces into modern, durable, and elegant living or working areas.</p>
         </div>
         <div class="service-card">
             <h3>Project Management</h3>
-            <p>Efficient planning, execution, and delivery to keep your project on time and within budget.</p>
+            <p>Ensuring efficient planning, execution, and delivery to keep your project on time and within budget.</p>
         </div>
     </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
-    <p>© 2025 Pami's Construction and Interiors | Bangalore, India</p>
+    <div class="container footer-content">
+        <p>© 2025 Pami's Construction & Interiors | Bangalore, India</p>
+    </div>
 </footer>
+
+<!-- JavaScript for Carousel -->
+<script>
+const images = document.querySelectorAll('.carousel-image');
+const prevBtn = document.querySelector('.carousel-btn.prev');
+const nextBtn = document.querySelector('.carousel-btn.next');
+let current = 0;
+
+function showImage(idx) {
+    images.forEach((img, i) => {
+        img.classList.toggle('active', i === idx);
+    });
+}
+
+prevBtn.addEventListener('click', () => {
+    current = (current - 1 + images.length) % images.length;
+    showImage(current);
+});
+
+nextBtn.addEventListener('click', () => {
+    current = (current + 1) % images.length;
+    showImage(current);
+});
+
+setInterval(() => {
+    current = (current + 1) % images.length;
+    showImage(current);
+}, 5000);
+
+showImage(current);
+</script>
+
 </body>
 </html>
