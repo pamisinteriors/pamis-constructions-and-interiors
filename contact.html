@@ -1,40 +1,65 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Pami's Construction and Interiors</title>
+    <title>Contact Us - Pami's Construction & Interiors</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+
+<!-- NAVIGATION -->
+<header class="navbar">
+    <div class="container nav-container">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.jpg" alt="Pami's Construction & Interiors Logo">
+            </a>
+        </div>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
 </header>
 
-<section>
-    <h1>Contact Us</h1>
-    <p>We’d love to hear from you! Reach out to discuss your project or request a free consultation.</p>
-    <div>
-        <p><strong>Address:</strong> Bangalore, Karnataka, India</p>
-        <p><strong>Phone:</strong> +91 9535504315</p>
-        <p><strong>Email:</strong> info@pamisconstruction.com</p>
+<!-- CONTACT SECTION -->
+<section class="contact-section container">
+    <div class="contact-header">
+        <h1>Contact Us</h1>
+        <p>We’d love to hear from you! Reach out to discuss your project or request a free consultation.</p>
     </div>
 
-    <form class="contact-form">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit">Send Message</button>
-    </form>
+    <div class="contact-grid">
+        <!-- Contact Info -->
+        <div class="contact-info">
+            <h2>Our Office</h2>
+            <p><strong>Address:</strong> Shop no 10, Lakshmaiah Building, Iggalure, Anekal Chandapura Main Road, Anekal, Bangalore Urban District, 560081</p>
+            <p><strong>Phone:</strong> +91 9535504315</p>
+            <p><strong>Email:</strong> info@pamisconstruction.com</p>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrapper">
+            <h2>Send a Message</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
-    <p>© 2025 Pami's Construction and Interiors | Bangalore, India</p>
+    <div class="container footer-content">
+        <p>© 2025 Pami's Construction & Interiors | Bangalore, India</p>
+    </div>
 </footer>
+
 </body>
 </html>
